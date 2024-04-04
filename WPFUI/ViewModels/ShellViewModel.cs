@@ -21,6 +21,25 @@ namespace WPFUI.ViewModels
         private List<TabelLowerSectionModel> _tabelLowerSectionsUpper;
         private List<TabelLowerSectionModel> _tabelLowerSectionsLower;
 
+        public List<TabelLowerSectionModel> TabelLowerSectionsUpper
+        {
+            get => _tabelLowerSectionsUpper;
+            set
+            {
+                _tabelLowerSectionsUpper = value;
+                NotifyOfPropertyChange(() => TabelLowerSectionsUpper);
+            }
+        }
+        public List<TabelLowerSectionModel> TabelLowerSectionsLower
+        {
+            get => _tabelLowerSectionsLower;
+            set
+            {
+                _tabelLowerSectionsLower = value;
+                NotifyOfPropertyChange(() => TabelLowerSectionsLower);
+            }
+        }
+
         //Main Section
         public List<NumberItem> Number
         {
@@ -62,21 +81,43 @@ namespace WPFUI.ViewModels
 
                 }
             }
-            TabelLowerSections = new List<TabelLowerSectionModel>
+            //lower table
+            TabelLowerSectionsUpper = new List<TabelLowerSectionModel>
             {
                 new TabelLowerSectionModel("1st12", 4, "1st12", Brushes.Black, 200, 50),
                 new TabelLowerSectionModel("2nd12", 4, "2nd12", Brushes.Black, 200, 50),
                 new TabelLowerSectionModel("3rd12", 4, "3rd12", Brushes.Black, 200, 50),
-                //new TabelLowerSectionModel("1 to 18", 2, "1to18", Brushes.Black, 100, 50),
-                //new TabelLowerSectionModel("Even", 2, "Even", Brushes.Black, 100, 50),
-                //new TabelLowerSectionModel("", 2, "Black", Brushes.Black, 100, 50),
-                //new TabelLowerSectionModel("", 2, "Red", Brushes.Red, 100, 50),
-                //new TabelLowerSectionModel("Odd", 2, "Odd", Brushes.Black, 100, 50),
-                //new TabelLowerSectionModel("19 to 36", 2, "19to36", Brushes.Black, 100, 50),
             };
+            TabelLowerSectionsLower = new List<TabelLowerSectionModel>
+            {
+                new TabelLowerSectionModel("1 to 18", 2, "1to18", Brushes.Black, 100, 50),
+                new TabelLowerSectionModel("Even", 2, "Even", Brushes.Black, 100, 50),
+                new TabelLowerSectionModel("", 2, "Black", Brushes.Black, 100, 50),
+                new TabelLowerSectionModel("", 2, "Red", Brushes.Red, 100, 50),
+                new TabelLowerSectionModel("Odd", 2, "Odd", Brushes.Black, 100, 50),
+                new TabelLowerSectionModel("19 to 36", 2, "19to36", Brushes.Black, 100, 50),
+            };
+
+
+
+            //TabelLowerSections = new List<TabelLowerSectionModel>
+            //{ pre split
+            //    new TabelLowerSectionModel("1st12", 4, "1st12", Brushes.Black, 200, 50),
+            //    new TabelLowerSectionModel("2nd12", 4, "2nd12", Brushes.Black, 200, 50),
+            //    new TabelLowerSectionModel("3rd12", 4, "3rd12", Brushes.Black, 200, 50),
+            //    //new TabelLowerSectionModel("1 to 18", 2, "1to18", Brushes.Black, 100, 50),
+            //    //new TabelLowerSectionModel("Even", 2, "Even", Brushes.Black, 100, 50),
+            //    //new TabelLowerSectionModel("", 2, "Black", Brushes.Black, 100, 50),
+            //    //new TabelLowerSectionModel("", 2, "Red", Brushes.Red, 100, 50),
+            //    //new TabelLowerSectionModel("Odd", 2, "Odd", Brushes.Black, 100, 50),
+            //    //new TabelLowerSectionModel("19 to 36", 2, "19to36", Brushes.Black, 100, 50),
+            //};
 
         } 
     }
+
+
+
 
     public class NumberItem
     {

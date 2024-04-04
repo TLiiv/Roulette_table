@@ -72,7 +72,7 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
         <!--LowerSection First row-->
-        <ItemsControl Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="13" Grid.RowSpan="2" ItemsSource="{Binding TabelLowerSections}">
+        <ItemsControl Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="13" Grid.RowSpan="2" ItemsSource="{Binding TabelLowerSectionsUpper}">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
                     <UniformGrid  Rows="2" Columns="3"/> <!--praegu õige 2 3 vm-->
@@ -92,7 +92,31 @@
             </DataTemplate>
         </ItemsControl.ItemTemplate>
     </ItemsControl>
+            <!--Lower Section second row-->
+        <ItemsControl Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="13" Grid.RowSpan="2" ItemsSource="{Binding TabelLowerSectionsLower}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                    <UniformGrid  Rows="2" Columns="6"/>
+                </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Grid Grid.ColumnSpan="{Binding ColumnSpan}" >
+                    <Rectangle  Fill="{Binding Color}"  Margin="5"  Stroke="White" />
+                    <TextBlock  
+                        Text="{Binding Text}"
+                        Foreground="White" 
+                        FontSize="16"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"  />
+                </Grid>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    
+        <!--Right Side-->
 
+        <!--Test object-->
         <Grid Grid.ColumnSpan="4" Grid.Row="8" Grid.Column="3">
             <Rectangle Fill="Purple" Margin="5"  Stroke="White" Width="200"/>
             <TextBlock  

@@ -8,34 +8,44 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using System.Windows.Media;
 
 namespace WPFUI.ViewModels
 {
     public class ShellViewModel : Conductor<object>
     {
+        private List<NumberItem> _number;
 
-        private List<int> _number = Enumerable.Range(1, 36).ToList();
-        
-        public List<int> Number
+        public List<NumberItem> Number
         {
-            get
-            {
-                return _number;
-            }
+            get => _number;
             set
             {
                 _number = value;
                 NotifyOfPropertyChange(() => Number);
-                
             }
         }
 
         public ShellViewModel()
         {
-
+            _number = new List<NumberItem>();
+            for (int i = 1; i <= 36; i++)
+            {
+                _number.Add(new NumberItem(i, i % 2 == 0 ? Brushes.Red : Brushes.Black)); // Initial colors (checkered pattern)
+            }
         }
-        
-      
+    }
+
+    public class NumberItem
+    {
+        public int Value { get; set; }
+        public Brush Color { get; set; }
+
+        public NumberItem(int value, Brush color)
+        {
+            Value = value;
+            Color = color;
+        }
     }
 }
+

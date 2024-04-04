@@ -15,6 +15,8 @@ namespace WPFUI.ViewModels
 {
     public class ShellViewModel : Conductor<object>
     {
+
+        //Main Section
         private List<NumberItem> _number;
         //Lower Section class import
        

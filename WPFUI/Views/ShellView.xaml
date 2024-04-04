@@ -51,7 +51,7 @@
                 />
         </Grid>
         <!--main layout-->
-            <ItemsControl Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="3" ItemsSource="{Binding Number}">
+            <ItemsControl Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="13" Grid.RowSpan="3" ItemsSource="{Binding Number}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid  Rows="3" Columns="12" />
@@ -60,7 +60,7 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Rectangle  Fill="{Binding Color}" Margin="5" Width="50" Height="60"/>
+                        <Rectangle  Fill="{Binding Color}" Margin="5" Width="50" Height="60" Stroke="White"/>
                         <TextBlock   
                             Text="{Binding Value}"
                             Foreground="White" 
@@ -71,7 +71,38 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        
+        <!--LowerSection First row-->
+        <ItemsControl Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="13" Grid.RowSpan="2" ItemsSource="{Binding TabelLowerSections}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                    <UniformGrid  Rows="2" Columns="3"/> <!--praegu õige 2 3 vm-->
+                </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                    <Grid Grid.ColumnSpan="{Binding ColumnSpan}" >
+                        <Rectangle  Fill="{Binding Color}"  Margin="5"  Stroke="White" />
+                    <TextBlock  
+                        Text="{Binding Text}"
+                        Foreground="White" 
+                        FontSize="16"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"  />
+                </Grid>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+
+        <Grid Grid.ColumnSpan="4" Grid.Row="8" Grid.Column="3">
+            <Rectangle Fill="Purple" Margin="5"  Stroke="White" Width="200"/>
+            <TextBlock  
+        Text="katse"
+        Foreground="White" 
+        FontSize="16"
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center"  />
+        </Grid>
+
     </Grid>
 </Window>
 

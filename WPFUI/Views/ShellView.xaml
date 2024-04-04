@@ -39,6 +39,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <!--0-->
         <Grid Grid.Row="2" Grid.Column="2" Grid.RowSpan="3">
             <Rectangle  Fill="Green" Margin="5" />
             <TextBlock 
@@ -49,10 +50,11 @@
                 VerticalAlignment="Center"
                 />
         </Grid>
+        <!--main layout-->
             <ItemsControl Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="3" ItemsSource="{Binding Number}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Rows="3" Columns="12"/>
+                    <UniformGrid  Rows="3" Columns="12" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
@@ -69,6 +71,7 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        
     </Grid>
 </Window>
 

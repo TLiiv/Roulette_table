@@ -29,9 +29,18 @@ namespace WPFUI.ViewModels
         public ShellViewModel()
         {
             _number = new List<NumberItem>();
-            for (int i = 1; i <= 36; i++)
+            // Add numbers in the desired pattern
+            for (int row = 0; row < 3; row++)
             {
-                _number.Add(new NumberItem(i, i % 2 == 0 ? Brushes.Red : Brushes.Black)); // Initial colors (checkered pattern)
+                for (int col = 0; col < 12; col++)
+                {
+                    // Calculate the value based on the column and row
+                    int value = (2 - row) + (3 * col) + 1;
+                    if (value <= 36)
+                    {
+                        _number.Add(new NumberItem(value, value % 2 == 0 ? Brushes.Red : Brushes.Black)); // Initial colors (checkered pattern)
+                    }
+                }
             }
         }
     }
@@ -48,4 +57,3 @@ namespace WPFUI.ViewModels
         }
     }
 }
-

@@ -93,18 +93,18 @@ namespace WPFUI.ViewModels
             //Lower table
             TabelLowerSectionsUpper = new List<TabelLowerSectionModel>
             {
-                new TabelLowerSectionModel("1st12", 4, "1st12", Brushes.Black, 200, 50),
-                new TabelLowerSectionModel("2nd12", 4, "2nd12", Brushes.Black, 200, 50),
-                new TabelLowerSectionModel("3rd12", 4, "3rd12", Brushes.Black, 200, 50),
+                new TabelLowerSectionModel("1st12", 4, "1st12", Brushes.Black, 212, 50),
+                new TabelLowerSectionModel("2nd12", 4, "2nd12", Brushes.Black, 212, 50),
+                new TabelLowerSectionModel("3rd12", 4, "3rd12", Brushes.Black, 212, 50),
             };
             TabelLowerSectionsLower = new List<TabelLowerSectionModel>
             {
-                new TabelLowerSectionModel("1 to 18", 2, "1to18", Brushes.Black, 100, 50),
-                new TabelLowerSectionModel("Even", 2, "Even", Brushes.Black, 100, 50),
-                new TabelLowerSectionModel("", 2, "Black", Brushes.Black, 100, 50),
-                new TabelLowerSectionModel("", 2, "Red", Brushes.Red, 100, 50),
-                new TabelLowerSectionModel("Odd", 2, "Odd", Brushes.Black, 100, 50),
-                new TabelLowerSectionModel("19 to 36", 2, "19to36", Brushes.Black, 100, 50),
+                new TabelLowerSectionModel("1 to 18", 2, "1to18", Brushes.Black, 104, 50),
+                new TabelLowerSectionModel("Even", 2, "Even", Brushes.Black, 104, 50),
+                new TabelLowerSectionModel("", 2, "Black", Brushes.Black, 104, 50),
+                new TabelLowerSectionModel("", 2, "Red", Brushes.Red, 104, 50),
+                new TabelLowerSectionModel("Odd", 2, "Odd", Brushes.Black, 104, 50),
+                new TabelLowerSectionModel("19 to 36", 2, "19to36", Brushes.Black, 104, 50),
             };
             
             //Right side of the table refactor when time
